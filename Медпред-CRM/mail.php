@@ -27,6 +27,7 @@ if (!empty($_POST)) {
 //Recipients
     $mail->setFrom('info@texnoaudit.ru', 'info@texnoaudit.ru');
     $mail->addAddress('hudson88@yandex.ru', 'hudson88@yandex.ru');     // Add a recipient
+    $mail->addAddress('olegv@med-pred.ru', 'olegv@med-pred.ru');     // Add a recipient
 
 //Attachments
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
