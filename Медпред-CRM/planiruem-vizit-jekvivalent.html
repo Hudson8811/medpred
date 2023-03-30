@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="plugins/fancybox/fancybox.css">
+	<link rel="stylesheet" href="plugins/aos/aos.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Планируем визит-эквивалент</title>
+    <meta name="description" content="Визит - эквивалент может быть привязан к конкретному врачу или клинике, если в клинике нет ни одного сотрудника, либо может быть запланирован из вкладки &quot;В/Э&quot;">
+</head>
+
+<body>
+
+	<!--svg Sprite-->
+<svg width="0" height="0" class="hidden" style="display: none">
+	<symbol viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" id="sms">
+		<path
+			d="M22.6665 4.6665H9.33317C5.33317 4.6665 2.6665 6.6665 2.6665 11.3332V20.6665C2.6665 25.3332 5.33317 27.3332 9.33317 27.3332H22.6665C26.6665 27.3332 29.3332 25.3332 29.3332 20.6665V11.3332C29.3332 6.6665 26.6665 4.6665 22.6665 4.6665ZM23.2932 12.7865L19.1198 16.1198C18.2398 16.8265 17.1198 17.1732 15.9998 17.1732C14.8798 17.1732 13.7465 16.8265 12.8798 16.1198L8.7065 12.7865C8.27984 12.4398 8.21317 11.7998 8.5465 11.3732C8.89317 10.9465 9.51984 10.8665 9.9465 11.2132L14.1198 14.5465C15.1332 15.3598 16.8532 15.3598 17.8665 14.5465L22.0398 11.2132C22.4665 10.8665 23.1065 10.9332 23.4398 11.3732C23.7865 11.7998 23.7198 12.4398 23.2932 12.7865Z" />
+	</symbol>
+	<symbol viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg" id="arrow-btn">
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="M0.583496 8.92709C0.583496 4.83324 3.90603 1.51123 8.00016 1.51123C8.41438 1.51123 8.75016 1.84702 8.75016 2.26123C8.75016 2.67544 8.41438 3.01123 8.00016 3.01123C4.73429 3.01123 2.0835 5.66183 2.0835 8.92709C2.0835 12.1923 4.73429 14.8429 8.00016 14.8429C11.266 14.8429 13.9168 12.1923 13.9168 8.92709C13.9168 8.51288 14.2526 8.17709 14.6668 8.17709C15.081 8.17709 15.4168 8.51288 15.4168 8.92709C15.4168 13.0209 12.0943 16.3429 8.00016 16.3429C3.90603 16.3429 0.583496 13.0209 0.583496 8.92709Z" />
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="M14.6635 2.26435C14.9564 2.55724 14.9564 3.03211 14.6635 3.32501L9.19683 8.79167C8.90394 9.08457 8.42907 9.08457 8.13617 8.79167C7.84328 8.49878 7.84328 8.02391 8.13617 7.73101L13.6028 2.26435C13.8957 1.97145 14.3706 1.97145 14.6635 2.26435Z" />
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="M10.6968 2.26123C10.6968 1.84702 11.0326 1.51123 11.4468 1.51123H14.6668C15.081 1.51123 15.4168 1.84702 15.4168 2.26123V5.48123C15.4168 5.89544 15.081 6.23123 14.6668 6.23123C14.2526 6.23123 13.9168 5.89544 13.9168 5.48123V3.01123H11.4468C11.0326 3.01123 10.6968 2.67544 10.6968 2.26123Z" />
+	</symbol>
+	<symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="play">
+		<path
+			d="M4 11.9999V8.43989C4 4.01989 7.13 2.2099 10.96 4.4199L14.05 6.1999L17.14 7.9799C20.97 10.1899 20.97 13.8099 17.14 16.0199L14.05 17.7999L10.96 19.5799C7.13 21.7899 4 19.9799 4 15.5599V11.9999Z" />
+	</symbol>
+	<symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="user">
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="M12 2.75C9.65279 2.75 7.75 4.65279 7.75 7C7.75 9.34721 9.65279 11.25 12 11.25C14.3472 11.25 16.25 9.34721 16.25 7C16.25 4.65279 14.3472 2.75 12 2.75ZM6.25 7C6.25 3.82436 8.82436 1.25 12 1.25C15.1756 1.25 17.75 3.82436 17.75 7C17.75 10.1756 15.1756 12.75 12 12.75C8.82436 12.75 6.25 10.1756 6.25 7Z" />
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="M2.66016 22C2.66016 17.5791 6.99728 14.25 12.0002 14.25C17.003 14.25 21.3401 17.5791 21.3401 22C21.3401 22.4142 21.0044 22.75 20.5901 22.75C20.1759 22.75 19.8401 22.4142 19.8401 22C19.8401 18.6809 16.4773 15.75 12.0002 15.75C7.52303 15.75 4.16016 18.6809 4.16016 22C4.16016 22.4142 3.82437 22.75 3.41016 22.75C2.99594 22.75 2.66016 22.4142 2.66016 22Z" />
+	</symbol>
+	<symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="home">
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="M11.4837 1.26893C12.5191 1.24465 13.5961 1.50772 14.4501 2.10555L20.6288 6.43468C20.6291 6.43483 20.6286 6.43452 20.6288 6.43468C21.2484 6.86672 21.7707 7.53283 22.1361 8.23291C22.5017 8.9333 22.75 9.74277 22.75 10.5V17.78C22.75 20.503 20.5254 22.74 17.79 22.74H6.21C3.47347 22.74 1.25 20.5019 1.25 17.77V10.36C1.25 9.6495 1.47441 8.88048 1.80418 8.20836C2.134 7.53615 2.60552 6.88682 3.16901 6.44837L8.55901 2.24837C9.38375 1.60692 10.4482 1.29321 11.4837 1.26893ZM9.48046 3.43199C9.48037 3.43205 9.48054 3.43192 9.48046 3.43199L4.09099 7.63157C3.75471 7.89312 3.4109 8.33901 3.15082 8.86909C2.89059 9.39946 2.75 9.94045 2.75 10.36V17.77C2.75 19.6781 4.30653 21.24 6.21 21.24H17.79C19.6946 21.24 21.25 19.6769 21.25 17.78V10.5C21.25 10.0472 21.0933 9.47665 20.8064 8.92703C20.5195 8.37737 20.1413 7.92324 19.7712 7.66527L19.7696 7.66421L13.5899 3.3344C13.5898 3.33434 13.59 3.33446 13.5899 3.3344C13.044 2.95235 12.2958 2.7503 11.5188 2.76852C10.7419 2.78674 10.0057 3.02357 9.48046 3.43199Z" />
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="M12 14.24C12.4142 14.24 12.75 14.5758 12.75 14.99V17.99C12.75 18.4042 12.4142 18.74 12 18.74C11.5858 18.74 11.25 18.4042 11.25 17.99V14.99C11.25 14.5758 11.5858 14.24 12 14.24Z" />
+	</symbol>
+	<symbol viewBox="-3 4.5 24 24" xmlns="http://www.w3.org/2000/svg" id="phone">
+		<path
+			d="M13.8 25.52c-3.12 0-6.48-2.72-8.76-4.96-1.96-1.92-5.12-5.64-5.040-8.96 0.040-1.4 0.64-2.56 1.76-3.52 1.28-1.080 2.28-1.6 3.16-1.6 1.24 0 1.92 0.96 2.36 1.6 0.4 0.6 1.4 2.080 1.8 2.84 0.64 1.2 0.32 2.28-0.92 3.24-0.080 0.040-0.080 0.080-0.12 0.12-0.040 0.36 0.84 1.24 1.24 1.6l0.4 0.4c0.4 0.4 1.2 1.24 1.6 1.24 0.040 0 0.12-0.080 0.12-0.12 0.64-0.84 1.32-1.24 2.080-1.24 0.48 0 0.88 0.16 1.16 0.32 0.76 0.4 2.24 1.4 2.84 1.8 0.56 0.4 1.44 1 1.6 2.040 0.12 0.96-0.36 2.040-1.56 3.48-1.040 1.16-2.28 1.72-3.72 1.72v0zM4.96 8.12c-0.24 0-0.84 0.16-2.080 1.2-0.76 0.64-1.16 1.4-1.2 2.32-0.080 2 1.56 4.8 4.48 7.72 2.84 2.84 5.6 4.48 7.6 4.48v0c0.96 0 1.8-0.4 2.48-1.2 1.12-1.32 1.24-1.92 1.2-2.16-0.040-0.28-0.32-0.52-0.88-0.88-0.44-0.32-1.96-1.32-2.68-1.72-0.12-0.080-0.24-0.12-0.36-0.12-0.2 0-0.48 0.2-0.76 0.6-0.48 0.64-1.040 0.76-1.44 0.76v0c-1.080 0-2.040-0.96-2.8-1.72l-0.36-0.36c-0.8-0.8-1.8-1.76-1.72-2.88 0.040-0.36 0.16-0.88 0.76-1.32 0.76-0.56 0.64-0.8 0.48-1.12-0.4-0.72-1.4-2.24-1.72-2.68-0.48-0.68-0.72-0.92-1-0.92z">
+		</path>
+	</symbol>
+	<symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="mail">
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="M3.88534 5.2371C3.20538 5.86848 2.75 6.89295 2.75 8.5V15.5C2.75 17.1071 3.20538 18.1315 3.88534 18.7629C4.57535 19.4036 5.61497 19.75 7 19.75H17C18.385 19.75 19.4246 19.4036 20.1147 18.7629C20.7946 18.1315 21.25 17.1071 21.25 15.5V8.5C21.25 6.89295 20.7946 5.86848 20.1147 5.2371C19.4246 4.59637 18.385 4.25 17 4.25H7C5.61497 4.25 4.57535 4.59637 3.88534 5.2371ZM2.86466 4.13791C3.92465 3.15363 5.38503 2.75 7 2.75H17C18.615 2.75 20.0754 3.15363 21.1353 4.13791C22.2054 5.13152 22.75 6.60705 22.75 8.5V15.5C22.75 17.393 22.2054 18.8685 21.1353 19.8621C20.0754 20.8464 18.615 21.25 17 21.25H7C5.38503 21.25 3.92465 20.8464 2.86466 19.8621C1.79462 18.8685 1.25 17.393 1.25 15.5V8.5C1.25 6.60705 1.79462 5.13152 2.86466 4.13791Z" />
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="M17.586 8.53196C17.8445 8.85561 17.7917 9.32754 17.4681 9.58605L14.3372 12.0868C13.0338 13.1244 10.9563 13.1244 9.65289 12.0868L9.65104 12.0853L6.53105 9.58531C6.2078 9.3263 6.15573 8.85429 6.41474 8.53105C6.67375 8.2078 7.14576 8.15573 7.46901 8.41474L10.588 10.9139C11.3446 11.5155 12.6462 11.5154 13.4026 10.9135C13.4027 10.9134 13.4025 10.9136 13.4026 10.9135L16.532 8.41401C16.8556 8.15551 17.3275 8.20832 17.586 8.53196Z" />
+	</symbol>
+	<symbol viewBox="0 0 418 341" xmlns="http://www.w3.org/2000/svg" id="news">
+		<path
+			d="M335 32C335 14.3269 320.673 0 303 0H418V113C418 95.3269 403.673 81 386 81H367C349.327 81 335 66.6731 335 49V32Z" />
+		<path
+			d="M144.5 317C144.5 330.255 155.245 341 168.5 341H0V261C0 278.673 14.3269 293 32 293H120.5C133.755 293 144.5 303.745 144.5 317Z" />
+	</symbol>
+	<symbol viewBox="0 0 418 341" xmlns="http://www.w3.org/2000/svg" id="news-2">
+
+	</symbol>
+</svg>
+<!--svg Sprite-->
+
+	<div class="wrapper">
+		<header class="header">
+			<div class='container'>
+				<div class="header__row">
+					<div class="header__left">
+						<div class="header__logo">
+							<a href="/" class="logo">
+								<img src="img/logo.svg" alt="#" />
+							</a>
+						</div>
+					</div>
+					<div class="header__center">
+						<div class="header__menu">
+							<div class="menu js-menu">
+								<nav class="menu__body">
+									<ul class="menu__list">
+										<li class="menu__item">
+											<a href="/#about" class="menu__link">Возможности</a>
+										</li>
+										<li class="menu__item">
+											<a href="/#modules" class="menu__link">Модули</a>
+										</li>
+										<li class="menu__item">
+											<a href="/#stages" class="menu__link">Этапы запуска</a>
+										</li>
+										<li class="menu__item">
+											<a href="/blog" class="menu__link">Блог</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<div class="header__phone" data-da=".menu__body,575.98,last">
+						<a href="tel:79250584883" class="header__tel">+7 (925) 058-48-83</a>
+					</div>
+					<div class="header__right">
+						<div class="header__body">
+							<div class="header__button">
+								<a href="#" class="header__btn">
+									Написать нам
+									<svg>
+										<use xlink:href="#sms"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="header__icon">
+								<div class="icon-menu js-menu__btn">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="main">
+
+<div class='container'>
+	<div class="article">
+		<div class="article__date">
+            2 октября 2022
+		</div>
+		<div class="article__text">
+			Версия: 1.53
+		</div>
+		<div class="article__title">
+			<h1>Планируем визит-эквивалент</h1>
+		</div>
+		<div class="detail-text">
+			<p>
+				Визит-эквивалент может быть привязан к конкретному врачу или клинике, если в клинике нет ни одного
+				сотрудника,
+				либо может быть запланирован из вкладки "В/Э"
+			</p>
+			<p>
+				Планировать визит-эквивалент в программе, можно несколькими способами:
+			</p>
+			<h3>
+				Планирование визит - эквивалента без привязки к объекту или субъекту.
+			</h3>
+			<ol>
+				<li>
+					Нажмите на раздел Планирование
+				</li>
+				<li>
+					Выберите вкладку В/Э
+				</li>
+				<li>
+					Запланируйте тип визита через стрелочку на нужную дату
+				</li>
+			</ol>
+			<img src="img/news/planiruem-vizit-jekvivalent/1.png" alt="#" />
+			<p>
+				В этом случае у вас будет Визит- эквивалент, например "Фармкружок" без привязки к объекту.
+			</p>
+			<h3>
+				Планирование визит - эквивалента с привязкой к субъекту/объекту
+			</h3>
+			<ol>
+				<li>
+					Нажмите на раздел Планирование , выберите вкладку "Врачи" (1) или "Аптеки" (2) или "Клиники" (2)
+				</li>
+				<li>
+					Выберите вкладку В/Э
+				</li>
+				<li>
+					Запланируйте визит через стрелочку на нужную дату. Откроется календарь (3)
+					<img src="img/news/planiruem-vizit-jekvivalent/2.png" alt="#" />
+				</li>
+				<li>
+					Выберите нужную дату, нажмите на кнопку
+				</li>
+				<li>
+					Сделайте визит - эквивалент активным. Обязательно выберите тип визит эквивалента (5), в противном случае
+					визит-эквивалент будет запланирован, но на карточке визита будет гореть напоминание, что "Категория
+					визита
+					не корректна. Не была задана или удалена администратором". В этом случае программа не даст Вам завершить
+					визит. Выберите корректную категорию Визит - эквивалента.
+				</li>
+				<p>
+					<b>В плане будет отображена вся вневизитная активность:</b>
+				</p>
+				<img src="img/news/planiruem-vizit-jekvivalent/3.png" alt="#" />
+				<ol>
+					<li>
+						Мастер-класс в Клинику (1)
+					</li>
+					<li>
+						Фармкружок к врачу (2) в примере выше. Проведите работу и завершите визиты.
+					</li>
+				</ol>
+				<ul>
+					<li>
+						Решение вопросов повышения уровня знаний и компетенций сотрудников
+					</li>
+					<li>
+						Возможность тестирования сотрудников онлайн
+					</li>
+					<li>
+						Анализ результатов подготовки сотрудников
+					</li>
+				</ul>
+			</ol>
+		</div>
+		<div class="article__link">
+			<a href="https://docs.med-pred.ru/guide/rep-planning-central-block-novisit.html" target="_blank">Документация</a>
+		</div>
+	</div>
+</div>
+
+<div class="block-news">
+	<div class='container'>
+		<div class="block-news__top" data-aos="fade" data-aos-duration="1000">
+			<div class="block-news__title">
+				Другие публикации
+			</div>
+			<a href="/blog" class="block-news__link">Все публикации</a>
+		</div>
+		<div class="news-list">
+			<div class="news-list__col" data-aos="fade" data-aos-duration="1000">
+				<div class="item-news">
+					<a href="/planiruem-vizit-jekvivalent" class="item-news__top">
+						<div class="item-news__date">
+							2 октября
+						</div>
+						<div class="item-news__link">
+							<svg>
+								<use xlink:href="#arrow-btn"></use>
+							</svg>
+						</div>
+						<div class="item-news__img">
+							<picture>
+								<img src="img/news/planiruem-vizit-jekvivalent/preview.png" alt="#" />
+							</picture>
+						</div>
+						<div class="item-news__elem">
+							<svg>
+								<use xlink:href="#news"></use>
+							</svg>
+						</div>
+					</a>
+					<div class="item-news__title">
+						<a href="/planiruem-vizit-jekvivalent">
+                            Планируем визит-эквивалент
+						</a>
+					</div>
+					<div class="item-news__text">
+                        Визит - эквивалент
+                        может быть привязан к конкретному врачу или клинике, если в клинике нет ни одного
+                        сотрудника, либо может быть запланирован из вкладки "В/Э"
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</div> <!-- end main -->
+
+<footer class="footer">
+	<div class='container'>
+		<div class="footer__row">
+			<div class="footer__left">
+				<div class="footer__logo">
+					<img src="img/footer-logo.svg" alt="#" />
+				</div>
+			</div>
+			<div class="footer__center">
+				<div class="footer__text">
+					© 2015-2022<br>
+					ООО «Вита Максима»
+				</div>
+			</div>
+			<div class="footer__right">
+				<a href="tel:79250584883" class="footer__tel">+7 (925) 058-48-83</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</div> <!-- end wrapper -->
+
+
+
+<div class="popup-recommended inner" id="form-success">
+	<div class="popup-recommended__body">
+		<div class="popup-recommended__success">
+			Сообщение отправлено!
+		</div>
+	</div>
+</div>
+
+<div class="popup-recommended subscription" id="subscription">
+	<div class="popup-recommended__body">
+		<form action="#" method="post" class="subscription-form">
+			<input type="hidden" name="subject" value="Подпишитесь на рассылку">
+			<input type="hidden" name="page">
+			<div class="subscription-form__title">
+				Подпишитесь на рассылку
+			</div>
+			<div class="form-group">
+				<input type="email" class="form-control" name="email" required placeholder="Ваш e-mail">
+				<div class="form-label">
+					<svg>
+						<use xlink:href="#mail"></use>
+					</svg>
+				</div>
+			</div>
+			<div class="subscription-form__btn">
+				<button type="submit" name="send" class="btn btn-orange">
+					<div class="btn__icon">
+						<div class="btn__elem-1"></div>
+						<svg>
+							<use xlink:href="#arrow-btn"></use>
+						</svg>
+						<div class="btn__elem-2"></div>
+					</div>
+					<div class="btn__text">
+						отправить
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/dynamicAdapt.js"></script>
+<script src="plugins/fancybox/fancybox.umd.js"></script>
+<script src="plugins/aos/aos.js"></script>
+<script src="plugins/inputmask/jquery.inputmask.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
