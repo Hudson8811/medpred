@@ -115,7 +115,7 @@
 					<div class="header__right">
 						<div class="header__body">
 							<div class="header__button">
-								<a href="mailto:info@med-pred.ru" class="header__btn">
+								<a href="#callback" data-fancybox class="header__btn">
 									Написать нам
 									<svg>
 										<use xlink:href="#sms"></use>
@@ -238,8 +238,8 @@
 				</div>
 				<div class="about-home__text">
 					универсальный продукт с которым можно работать на любом устройстве - ПК, ноутбук, планшет, смартфон и на
-					любой операционной системе Windows/Mac OS Linuks
-				</div>
+					любой операционной системе Windows, Linux, MAC OS и Android
+                </div>
 			</div>
 			<div class="about-home__row">
 				<div class="about-home__col">
@@ -261,13 +261,18 @@
 							</svg>
 						</div>
 						<div class="item-about__body">
-							<a href="video/prostota.mp4" data-fancybox class="item-about__btn" style="background-image: url('img/video/prostota.png')">
-								<span>
-									<svg>
-										<use xlink:href="#play"></use>
-									</svg>
-								</span>
-							</a>
+                            <div class="item-about__left">
+                                <div class="item-about__btn" style="background-image: url('img/video/prostota.png')"></div>
+                                <a href="video/prostota.mp4" class="btn-video" data-fancybox>
+                                    <span>
+                                        <svg>
+                                            <use xlink:href="#play"></use>
+                                        </svg>
+                                    </span>
+                                    Посмотреть<br>
+                                    видео
+                                </a>
+                            </div>
 							<div class="item-about__block">
 								<div class="item-about__title">
 									Простота
@@ -303,13 +308,18 @@
 							</svg>
 						</div>
 						<div class="item-about__body">
-							<a href="video/kriterii.mp4" data-fancybox class="item-about__btn"  style="background-image: url('img/video/kriterii.png')">
-								<span>
-									<svg>
-										<use xlink:href="#play"></use>
-									</svg>
-								</span>
-							</a>
+                            <div class="item-about__left">
+                                <div class="item-about__btn" style="background-image: url('img/video/kriterii.png')"></div>
+                                <a href="video/kriterii.mp4" class="btn-video" data-fancybox>
+                                    <span>
+                                        <svg>
+                                            <use xlink:href="#play"></use>
+                                        </svg>
+                                    </span>
+                                    Посмотреть<br>
+                                    видео
+                                </a>
+                            </div>
 							<div class="item-about__block">
 								<div class="item-about__title">
 									Критерии<br>
@@ -339,13 +349,18 @@
 							</svg>
 						</div>
 						<div class="item-about__body">
-							<a href="video/shir-vozm.mp4" data-fancybox class="item-about__btn"  style="background-image: url('img/video/shir-vozm.png')">
-								<span>
-									<svg>
-										<use xlink:href="#play"></use>
-									</svg>
-								</span>
-							</a>
+                            <div class="item-about__left">
+                                <div class="item-about__btn" style="background-image: url('img/video/shir-vozm.png')"></div>
+                                <a href="video/shir-vozm.mp4" class="btn-video" data-fancybox>
+                                    <span>
+                                        <svg>
+                                            <use xlink:href="#play"></use>
+                                        </svg>
+                                    </span>
+                                    Посмотреть<br>
+                                    видео
+                                </a>
+                            </div>
 							<div class="item-about__block">
 								<div class="item-about__title">
 									Широкие<br>
@@ -390,20 +405,25 @@
 							</svg>
 						</div>
 						<div class="item-about__body">
-							<a href="video/analitika.mp4" data-fancybox class="item-about__btn"  style="background-image: url('img/video/analitika.png')">
-								<span>
-									<svg>
-										<use xlink:href="#play"></use>
-									</svg>
-								</span>
-							</a>
+                            <div class="item-about__left">
+                                <div class="item-about__btn" style="background-image: url('img/video/analitika.png')"></div>
+                                <a href="video/analitika.mp4" class="btn-video" data-fancybox>
+                                    <span>
+                                        <svg>
+                                            <use xlink:href="#play"></use>
+                                        </svg>
+                                    </span>
+                                    Посмотреть<br>
+                                    видео
+                                </a>
+                            </div>
 							<div class="item-about__block">
 								<div class="item-about__title">
 									Отчеты и<br>
 									аналитика
 								</div>
 								<div class="item-about__text">
-									Модуль проводить подробную аналитику работы медпредставителей и контролировать их
+									Модуль позволяет проводить подробную аналитику работы медпредставителей и контролировать их
 									деятельность,
 									в том числе через журнал действий
 								</div>
@@ -599,6 +619,7 @@
 									</div>
 								</a>
 							</div>
+                            <!--
 							<div class="stages-home__btn">
 								<a href="#" class="btn-video">
 									<span>
@@ -610,6 +631,7 @@
 									видео
 								</a>
 							</div>
+							-->
 						</div>
 					</div>
 				</div>
@@ -1373,7 +1395,50 @@
 </div>
 
 
-
+    <div class="popup-recommended subscription" id="callback">
+        <div class="popup-recommended__body">
+            <form action="#" method="post" class="subscription-form">
+                <input type="hidden" name="subject" value="Обратная связь">
+                <input type="hidden" name="page">
+                <div class="subscription-form__title">
+                    Написать сообщение
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" required placeholder="Ваше имя и фамилия" name="name">
+                    <div class="form-label">
+                        <svg>
+                            <use xlink:href="#user"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" required placeholder="Ваш e-mail">
+                    <div class="form-label">
+                        <svg>
+                            <use xlink:href="#mail"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="form-group form-group--textarea">
+                    <textarea class="form-control" name="message" required placeholder="Сообщение"></textarea>
+                </div>
+                <div class="subscription-form__btn">
+                    <button type="submit" name="send" class="btn btn-orange">
+                        <div class="btn__icon">
+                            <div class="btn__elem-1"></div>
+                            <svg>
+                                <use xlink:href="#arrow-btn"></use>
+                            </svg>
+                            <div class="btn__elem-2"></div>
+                        </div>
+                        <div class="btn__text">
+                            отправить
+                        </div>
+                    </button>
+                </div>
+            </form>
+        </div>
+</div>
 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/dynamicAdapt.js"></script>

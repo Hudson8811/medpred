@@ -46,8 +46,7 @@ $(document).ready(function () {
 		})
 
 	});
-	let str = 'Лапароскопическая'
-})
+});
 
 
 $(document).on('click', '.js-menu__btn', function () {
