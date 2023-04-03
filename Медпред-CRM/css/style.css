@@ -1115,7 +1115,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .item-about__left a{
-    margin-top: 8px;
+    margin-top: 24px;
 }
 
 
@@ -2870,8 +2870,8 @@ textarea.form-control{
         width: 100%;
     }
     .item-about__left a{
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
   .item-about__block{
